@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 // assume `db.query(sql, cb)` runs SQL against a DB
-
+// test code scanning
 app.get('/search', (req, res) => {
   const q = req.query.q;
   // BAD: directly interpolating user input into SQL-like string
