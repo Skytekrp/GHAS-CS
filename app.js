@@ -1,4 +1,4 @@
-// vulnerable-sql.js — intentionally vulnerable example
+// vulnerable-sql.js — intentionally vulnerable example and update this one
 const express = require('express');
 const mysql = require('mysql');
 
