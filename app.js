@@ -1,4 +1,4 @@
-// vulnerable-sql.js — intentionally vulnerable example
+// vulnerable-sql.js — intentionally vulnerable example and update this one
 const express = require('express');
 const mysql = require('mysql');
 
@@ -12,7 +12,7 @@ const pool = mysql.createPool({
 
 app.get('/search', (req, res) => {
   const q = req.query.q; // user-controlled
-  // <-- BAD: direct string interpolation into SQL (classic SQLi sink)
+  // <-- BAD: direct string interpolation into SQL (classic SQLi sink) sink
   const sql = `SELECT * FROM products WHERE name = '${q}'`;
   pool.query(sql, (err, rows) => {
     if (err) return res.status(500).send('error');
